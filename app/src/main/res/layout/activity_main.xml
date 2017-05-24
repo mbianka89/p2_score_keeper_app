@@ -1,0 +1,216 @@
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/volleyb">
+
+    //This is an Volleyball score keeping app, keeping track of both
+    the points and the serves of the Home team and that of the Guest Team. The
+    reset button resets both points and serves to 0.
+
+
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            //Displaying: Home Team`s Score.
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@styles/Fonts"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Home Team"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+
+                android:id="@+id/scoreHomeTeam"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="sans-serif-light"
+
+                android:gravity="center"
+
+                android:padding="4dp"
+
+                android:text="0"
+
+                android:textColor="#ffffff"
+
+                android:textSize="56sp" />
+
+            //Adding a +1 point button
+
+
+            <Button
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:onClick="addOneForHomeTeam"
+
+                android:text="+1 Point" />
+
+            //Displaying the number of serves of the home team.
+
+            <TextView
+                android:id="@+id/numberOfServesHome"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            //Adding +1 serves to Home Team.
+
+            <Button
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:onClick="ServesHomeTeam"
+
+                android:text="Number of serves" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="160dp"
+            android:background="@android:color/darker_gray">
+
+        </View>
+
+
+        <LinearLayout
+
+            android:layout_width="1dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            //Displaying the score of Guest Team.
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="sans-serif-light"
+
+                android:gravity="center"
+
+                android:padding="4dp"
+
+                android:text="Guest Team"
+
+                android:textColor="#ffffff"
+
+                android:textSize="20sp" />
+
+
+            <TextView
+
+                android:id="@+id/scoreGuestTeam"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="sans-serif-light"
+
+                android:gravity="center"
+
+                android:padding="4dp"
+
+                android:text="0"
+
+                android:textColor="#ffffff"
+
+                android:textSize="56sp" />
+
+            //A button add +1 point for Guest Team.
+            <Button
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:onClick="addOneForGuestTeam"
+
+                android:text="+1 Point" />
+
+            //Keeping track of the number of serves of the Guest Team.
+
+            <TextView
+                android:id="@+id/numberOfServesGuest"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            //A button to add +1 to the current number of serves.
+
+            <Button
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:onClick="ServesGuestTeam"
+
+                android:text="number of serves" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    // This is the reset button to reset both the Home Team`s and the Guest Team`s points and serves to zero.
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="resetScore"
+        android:text="reset" />
+
+
+</RelativeLayout>
