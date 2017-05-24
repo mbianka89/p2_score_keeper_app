@@ -7,6 +7,5 @@
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#c9a39b
         </item>
-        <item name="Fonts">sans-serif-light</item>
     </style>
 </resources>
